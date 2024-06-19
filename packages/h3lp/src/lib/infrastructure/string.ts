@@ -1,5 +1,5 @@
 import { NormalizeOptions } from '../domain/base'
-import { EqualOptions, IStringHelper, IValidator } from '../application'
+import { EqualOptions, IStringHelper, IValidator } from '../application/index'
 
 export class StringHelper implements IStringHelper {
 	// eslint-disable-next-line no-useless-constructor

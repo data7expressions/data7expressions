@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import { h3lp } from '../../lib'
+import { h3lp } from '../../lib/index'
 import path from 'path'
 
 const objectTemplate = {

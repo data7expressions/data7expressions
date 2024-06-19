@@ -1,4 +1,4 @@
-import { IUtils, IValidator, IFsHelper, IHttpHelper, IObjectHelper, IStringHelper, ITestHelper, IArrayHelper } from '.'
+import { IUtils, IValidator, IFsHelper, IHttpHelper, IObjectHelper, IStringHelper, ITestHelper, IArrayHelper } from './index'
 export class H3lp {
 	// eslint-disable-next-line no-useless-constructor
 	constructor (public readonly utils: IUtils,

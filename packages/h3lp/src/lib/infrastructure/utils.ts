@@ -1,6 +1,6 @@
-import { IReplacer } from '../domain'
+import { IReplacer } from '../domain/index'
 import { exec } from 'child_process'
-import { ContextReplacer, EnvironmentVariableReplacer, IUtils, IValidator, IObjectHelper } from '../application'
+import { ContextReplacer, EnvironmentVariableReplacer, IUtils, IValidator, IObjectHelper } from '../application/index'
 
 export class Utils implements IUtils {
 	// eslint-disable-next-line no-useless-constructor

@@ -2,13 +2,12 @@
 	"name": "@data7expressions/jexp",
 	"version": "2.0.0",
 	"description": "Parser and evaluator of expressions by line of commands. The expressions correspond to the package 3xpr",
-	"private": true,
 	"homepage": "https://data7expressions.github.io/data7expressions/jexp",	
-	"dependencies": {
+	"dependencies": {		
+		"@data7expressions/jemv": "file:../jemv",
+		"@data7expressions/3xpr": "file:../3xpr",
+		"@data7expressions/h3lp": "file:../h3lp",
 		"commander": "^12.0.0",
-		"@data7expressions/jemv": "^2.0.0",
-		"@data7expressions/3xpr": "^2.0.0",
-		"@data7expressions/h3lp": "^2.0.0",
 		"js-yaml": "^4.1.0",
 		"crypto-js": "^4.2.0"
 	},	

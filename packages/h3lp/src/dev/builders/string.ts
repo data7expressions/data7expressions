@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import { h3lp, IBuildTest, TestSuiteRequest } from '../../lib'
+import { h3lp, IBuildTest, TestSuiteRequest } from '../../lib/index'
 
 export class StringBuildTest implements IBuildTest {
 	public build (): TestSuiteRequest {

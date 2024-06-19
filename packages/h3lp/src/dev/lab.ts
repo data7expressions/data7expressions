@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import { h3lp } from '../lib'
+import { h3lp } from '../lib/index'
 ;(async () => {
 	console.log(h3lp.str.notation('BI_CODE', 'camel'))
 	console.log(h3lp.str.notation('BusinessCode', 'camel'))

@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { h3lp } from '../../'
+import { h3lp } from '../../index'
 
 describe('string', () => {
-	const context = JSON.parse('{}')
 	test('capitalize', () => {
 		expect(h3lp.str.capitalize('hello world')).toStrictEqual('Hello world')
 		expect(h3lp.str.capitalize('house')).toStrictEqual('House')

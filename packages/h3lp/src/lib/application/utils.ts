@@ -1,4 +1,4 @@
-import { IReplacer } from '../domain'
+import { IReplacer } from '../domain/index'
 import { IObjectHelper } from './object'
 
 export interface IContextReplacer extends IReplacer {

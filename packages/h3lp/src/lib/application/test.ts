@@ -1,4 +1,4 @@
-import { IBuildTest, TestBuildInfo } from '../domain'
+import { IBuildTest, TestBuildInfo } from '../domain/index'
 
 export interface ITestSuiteBuilder {
 	add (test: IBuildTest): ITestSuiteBuilder

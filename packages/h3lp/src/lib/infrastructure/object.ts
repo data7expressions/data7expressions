@@ -1,5 +1,5 @@
 import { Delta, DeltaOptions } from '../index'
-import { IObjectHelper, IHttpHelper, IValidator, ObjectEqualOptions } from '../application'
+import { IObjectHelper, IHttpHelper, IValidator, ObjectEqualOptions } from '../application/index'
 
 export class ObjectHelper implements IObjectHelper {
 	// eslint-disable-next-line no-useless-constructor

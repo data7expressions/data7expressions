@@ -1,4 +1,4 @@
-import { Delta, DeltaOptions } from '../domain'
+import { Delta, DeltaOptions } from '../domain/index'
 
 export interface ObjectEqualOptions {
 	strict?: boolean

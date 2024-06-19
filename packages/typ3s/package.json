@@ -4,7 +4,7 @@
 	"description": "Allow define type on json",
 	"homepage": "https://data7expressions.github.io/data7expressions/typ3s",
 	"dependencies": {
-		"@data7expressions/h3lp": "^2.0.0"
+		"@data7expressions/h3lp": "file:../h3lp"
 	},
 	"keywords": [
 		"json",

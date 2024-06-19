@@ -1,8 +1,8 @@
 import {
 	IBuildTest, TestBuildInfo, TestSuiteRequest,
 	TestSuite, TestCase, TestSuiteTemplate
-} from '../domain'
-import { ITestHelper, IStringHelper, IObjectHelper, IFsHelper, IUtils, ITestSuiteBuilder, ITestBuilder } from '../application'
+} from '../domain/index'
+import { ITestHelper, IStringHelper, IObjectHelper, IFsHelper, IUtils, ITestSuiteBuilder, ITestBuilder } from '../application/index'
 
 export class TestSuiteBuilder implements ITestSuiteBuilder {
 	// eslint-disable-next-line no-useless-constructor
