@@ -3,6 +3,13 @@
 	"version": "2.0.0",
 	"description": "expressions",
 	"homepage": "https://data7expressions.github.io/data7expressions/3xpr",
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/data7expressions/data7expressions.git"
+  },
+	"publishConfig": {
+    "access": "public"
+  },
 	"dependencies": {
 		"@data7expressions/typ3s": "file:../typ3s",
 		"@data7expressions/h3lp": "file:../h3lp"

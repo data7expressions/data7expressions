@@ -3,6 +3,13 @@
 	"version": "2.0.0",
 	"description": "Schema Manager",
 	"homepage": "https://data7expressions.github.io/data7expressions/schema-manager",
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/data7expressions/data7expressions.git"
+  },
+	"publishConfig": {
+    "access": "public"
+  },	
 	"dependencies": {
 		"@data7expressions/h3lp": "file:../h3lp"
 	},	
