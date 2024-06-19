@@ -39,6 +39,7 @@
 		"substr",
 		"title",
 		"trunc",
+		"undici",
 		"usecase"
 	],
 	"editor.inlineSuggest.showToolbar": "onHover"
