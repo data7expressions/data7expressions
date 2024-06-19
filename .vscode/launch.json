@@ -1,0 +1,434 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		//  3xpr ----------------------------------------------------------------------------------------------------------
+		{
+			"type": "node",
+			"name": "3xpr/test",
+			"request": "launch",
+			"program": "${workspaceFolder}/pakages/3xpr/src/dev/test.js"
+		},
+		{
+			"name": "3xpr/lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/3xpr/src/dev/lab/lab.ts"
+		},
+		{
+			"name": "3xpr/build Test",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/3xpr/src/dev/task/buildTest.ts"
+		},
+		
+		{
+			"name": "3xp/build wiki",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/3xpr/src/dev/task/buildWiki.ts"
+		},
+		{
+			"name": "3xpr/build config",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/3xpr/src/dev/task/buildConfig.ts"
+		},
+		//	config-extends ----------------------------------------------------------------------------------------------------------
+		{
+			"name": "config-extends/lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/config-extends/src/dev/lab.ts"
+		},
+		// test suite	----------------------------------------------------------------------------------------------------------
+		{
+			"name": "test suite",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/test-suite/src/index.ts"
+		},
+		// h3lp ----------------------------------------------------------------------------------------------------------
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "h3lp/lab",
+			"skipFiles": [
+					"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/h3lp/src/dev/lab.ts"            
+		},
+		{
+				"type": "node",
+				"request": "launch",
+				"name": "h3lp/builder test suite",
+				"skipFiles": [
+						"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/pakages/h3lp/src/dev/tasks/buildTestSuite.ts"            
+		},
+		{
+				"type": "node",
+				"request": "launch",
+				"name": "h3lp/builder test",
+				"skipFiles": [
+						"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/pakages/h3lp/src/dev/tasks/buildTest.ts"            
+		},
+		// jemv --------------------------------------------------------------------------------------------------------------------
+		{
+			"name": "jemv/lab ref",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jemv/src/dev/lab/lab-ref.ts"
+		},
+		{
+			"name": "jemv/lab ref normalized",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jemv/src/dev/lab/lab-ref-normalized.ts"
+		},
+		{
+			"name": "jemv/lab ref load",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jemv/src/dev/lab/lab-ref-load.ts"
+		},
+		{
+			"name": "jemv/lab avj",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jemv/src/dev/lab/lab-avj.ts"
+		},		
+		{
+			"name": "jemv/task generate test",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jemv/src/dev/task/generate-test.ts"
+		},
+		// jexp --------------------------------------------------------------------------------------------------------------------
+		{
+			"name": "jexp/invalid parameters",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jexp/src/lib/cli.ts",
+			"args": [
+				"test"
+			]
+		},
+        {
+			"name": "jexp/eval countries",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jexp/src/lib/cli.ts",
+			"args": [
+				"eval",
+				".[0]",
+                "~/develop/jexp/data/countries.json"
+			]
+		},
+		{
+			"name": "jexp/eval countries yaml",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jexp/src/lib/cli.ts",
+			"args": [
+				"eval",
+				".[0]",
+                "~/develop/jexp/data/countries.json",
+				"-o",
+				"yaml"
+			]
+		},
+		{
+			"name": "jexp/eval countries -b",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jexp/src/lib/cli.ts",
+			"args": [
+				"eval",	
+				".[0]",
+                "~/develop/jexp/data/countries.json",
+				"-b"
+			]
+		},
+		{
+			"name": "jexp/eval countries -d",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jexp/src/lib/cli.ts",
+			"args": [
+				"eval",
+				".[0]",
+                "~/develop/jexp/data/countries.json",
+				"-d"
+			]
+		},
+		{
+			"name": "jexp/eval lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jexp/src/dev/lab/eval/lab.ts"			
+		},
+		{
+			"name": "jexp/schema ref",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/jexp/src/dev/lab/schema/lab-ref.ts"
+		},  
+		// json ligth ------------------------------------------------------------------------------------------------------------
+		{
+			"name": "jexp/order lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/json-light/src/dev/labs/order.ts"
+		},
+		{
+			"name": "jexp/country lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/json-light/src/dev/labs/country.ts"
+		},
+		{
+			"name": "jexp/cli help",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/json-light/src/lib/infrastructure/cli/json-light.ts",
+			"args": [
+				"help"					
+			]
+		},
+		{
+			"name": "jexp/cli schema",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/json-light/src/lib/infrastructure/cli/json-light.ts",
+			"args": [
+				"schema",
+				"-i",
+				"src/dev/sources/northwind.json"			
+			]
+		},
+		{
+			"name": "jexp/cli compress",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/json-light/src/lib/infrastructure/cli/json-light.ts",
+			"args": [
+				"compress",
+				"-i",
+				"src/dev/sources/northwind.json",
+				"-o",
+				"src/dev/results/northwind.json",
+				"-m"			
+			]
+		},
+		{
+			"name": "jexp/cli decompress",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/pakages/json-light/src/lib/infrastructure/cli/json-light.ts",
+			"args": [
+				"decompress",
+				"-i",
+				"src/dev/results/northwind.json",	
+				"-o",
+				"src/dev/results/northwind_original.json"			
+			]
+		},
+		// schema manager ----------------------------------------------------------------------------------------------------------------
+		{
+			"name": "schema-manager/lab load",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/schema-manager/src/dev/lab/lab-load.ts"
+		},
+		{
+			"name": "schema-manager/lab ref",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/schema-manager/src/dev/lab/lab-ref.ts"
+		},
+		{
+			"name": "schema-manager/generate data test",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/schema-manager/src/dev/task/generate-data-test.ts"
+		},
+		{
+			"name": "schema-manager/generate test",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/schema-manager/src/dev/task/generate-test.ts"
+		},
+		// typ3s -----------------------------------------------------------------------------------------------------------------
+		{
+			"name": "typ3s/simple lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/simple.ts"
+		},						
+		{
+			"name": "typ3s/order lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/order.ts"
+		},
+		{
+			"name": "typ3s/country lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/country.ts"
+		},
+		{
+			"name": "typ3s/function lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/function.ts"
+		},
+		{
+			"name": "typ3s/list lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/list.ts"
+		},
+		{
+			"name": "typ3s/info lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/info.ts"
+		},
+		{
+			"name": "typ3s/describe lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/describe.ts"
+		},
+		{
+			"name": "typ3s/enums lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/enums.ts"
+		},
+		{
+			"name": "typ3s/validate lab",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/typ3s/src/dev/labs/validate.ts"
+		}			
+	]
+}

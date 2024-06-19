@@ -1,0 +1,43 @@
+{
+	"eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"cSpell.words": [
+		"ascii",
+		"Autowired",
+		"branchlint",
+		"branchlintrc",
+		"Charly",
+		"commitlint",
+		"concat",
+		"deasync",
+		"Flavio",
+		"Gitflow",
+		"github",
+		"Gruntfile",
+		"imei",
+		"jemv",
+		"jexl",
+		"jexp",
+		"kaciras",
+		"kotlin",
+		"lambdaorm",
+		"Lanús",
+		"lpad",
+		"ltrim",
+		"nlohmann",
+		"npmjs",
+		"NPMN",
+		"nullable",
+		"rpad",
+		"rtrim",
+		"substr",
+		"title",
+		"trunc",
+		"usecase"
+	],
+	"editor.inlineSuggest.showToolbar": "onHover"
+}

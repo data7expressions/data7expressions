@@ -1,0 +1,41 @@
+mappings:
+  - name: default
+    entities:
+      - name: LocCountries
+        mapping: tbl_loc_countries
+        properties:
+          - name: numericCode
+            mapping: numeric_code
+      - name: LocAreas
+        mapping: tbl_loc_areas
+        properties:
+          - name: parentCode
+            mapping: parent
+          - name: countryCode
+            mapping: country  
+      - name: LocAddresses
+        mapping: tbl_loc_addresses
+        properties:
+          - name: countryCode
+            mapping: country
+          - name: areaCode
+            mapping: area 
+          - name: streetName
+            mapping: street
+          - name: streetType
+            mapping: street_type
+          - name: streetNrFirst
+            mapping: nro
+          - name: zipCode
+            mapping: zip_code
+          - name: additionalData
+            mapping: additional_data       
+  - name: oracle
+    extends: default
+    entities:
+      - name: LocCountries
+        sequence: sq_loc_countries
+      - name: LocAreas
+        sequence: sq_loc_areas
+      - name: LocAddresses
+        sequence: sq_loc_addresses

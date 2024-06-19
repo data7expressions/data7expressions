@@ -1,0 +1,40 @@
+{
+  "unchanged": [
+    {
+      "name": "a",
+      "value": 1
+    }
+  ],
+  "children": [
+    {
+      "name": "b",
+      "type": "array",
+      "change": false,
+      "delta": {
+        "unchanged": [
+          {
+            "name": "b",
+            "value": {
+              "code": "BR",
+              "name": "Brasil",
+              "zones": [
+                {
+                  "code": "Belén",
+                  "gmt": -3
+                },
+                {
+                  "code": "Manaos",
+                  "gmt": -4
+                },
+                {
+                  "code": "Rio Branco ",
+                  "gmt": -6
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

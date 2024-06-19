@@ -1,0 +1,7 @@
+_extends: category.4years
+level: 3
+sequence:
+  type : "random"
+  shapes: LTJOI
+  speedMin: 1
+  speedMax: 5

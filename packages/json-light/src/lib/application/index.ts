@@ -1,0 +1,5 @@
+export * from './services/jsonLightService'
+export * from './useCases/compress'
+export * from './useCases/decompress'
+export * from './useCases/getType'
+export * from './facade'

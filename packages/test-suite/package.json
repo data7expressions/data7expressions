@@ -1,0 +1,31 @@
+{
+	"name": "@data7expressions/test-suite",
+	"version": "2.0.0",
+	"description": "test suite for expressions",	
+	"private": true,
+	"homepage": "https://data7expressions.github.io/data7expressions/test-suite",	
+	"dependencies": {
+		"@data7expressions/h3lp": "^2.0.0",
+		"@data7expressions/3xpr": "^2.0.0"
+	},
+	"keywords": [
+		"test",
+		"suite",
+		"expression",
+		"expressions",
+		"exp",
+		"parser",
+		"eval",
+		"evaluator"
+	],
+	"tags": [
+		"test",
+		"suite",
+		"expression",
+		"expressions",
+		"exp",
+		"parser",
+		"eval",
+		"evaluator"
+	]
+}

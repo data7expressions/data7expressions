@@ -1,0 +1,27 @@
+{
+	"name": "@data7expressions/3xpr",
+	"version": "2.0.0",
+	"description": "expressions",
+	"private": true,
+	"homepage": "https://data7expressions.github.io/data7expressions/3xpr",
+	"dependencies": {
+		"@data7expressions/typ3s": "^2.0.0",
+		"@data7expressions/h3lp": "^2.0.0"
+	},
+	"keywords": [
+		"expression",
+		"expressions",
+		"exp",
+		"parser",
+		"eval",
+		"evaluator"
+	],
+	"tags": [
+		"expression",
+		"expressions",
+		"exp",
+		"parser",
+		"eval",
+		"evaluator"
+	]
+}

@@ -1,0 +1,274 @@
+enums: 
+  - name: PartyType
+    values:
+      - name: Individual
+      - name: Organization
+  - name: PartyRoleType
+    values:
+      - name: Employee
+      - name: Customer
+      - name: Creditor
+  - name: PartyStatus
+    values:
+      - name: Created
+      - name: Active
+      - name: InProgress
+      - name: Inactive
+  - name: PartyRoleStatus
+    values:
+      - name: Initial
+      - name: Active
+      - name: Inactive 
+  - name: IdentificationType
+    values:
+      - name: NotAvailable
+      - name: DNI 
+      - name: RUC
+      - name: Passport
+      - name: CIP
+      - name: CE
+      - name: CDI
+      - name: CTM
+      - name: CPP
+      - name: CIE
+      - name: CIRE                         
+  - name: Gender
+    values:
+      - name: Male
+        value: M
+      - name: Female
+        value: F
+      - name: Undefined
+        value: U
+  - name: MaritalStatus
+    values:
+      - name: Married
+      - name: Divorced
+      - name: Single
+      - name: Widower
+      - name: Concubinage
+      - name: Separation
+      - name: Undefined
+  - name: ContactMediumType
+    values:
+      - name: Landline
+      - name: Phone
+      - name: Email
+      - name: Twitter
+      - name: Instagram
+      - name: Facebook
+      - name: Skype                                      
+entities:
+    # Party settings
+  - name: PmIndustryTypes
+    primaryKey: ["code"]
+    properties:
+      - name: code
+        length: 30
+        required: true
+      - name: name
+        length: 255
+        required: true
+  # Party business
+  - name: PmParties
+    extends: Basics
+    primaryKey: [id]
+    properties:
+      - name: id
+        type: integer
+        autoIncrement: true
+      - name: type
+        enum: PartyType
+        length: 3
+      - name: status
+        enum: PartyStatus
+        length: 12
+        required: true
+      - name: registeredDate
+        type: dateTime
+        default: now()
+  - name: PmPartyRoles
+    primaryKey: ["id"]
+    properties:
+      - name: id
+        type: integer
+        required: true
+        autoIncrement: true
+      - name: partyId
+        type: integer
+        required: true
+      - name: type
+        # old partyRoleSpecId
+        length: 16         
+        required: true
+        enum: PartyRoleType    
+      - name: status
+        length: 16
+        required: true
+        enum: PartyRoleStatus
+      - name: description
+        #  old name
+        length: 100        
+      - name: from
+        # old validFrom
+        type: dateTime
+      - name: to
+        # old validTo
+        type: dateTime        
+    relations:
+      - name: party          
+        from: partyId
+        entity: PmParties
+        to: id
+        type: oneToOne
+      - name: individual          
+        from: partyId
+        entity: PmIndividuals
+        to: id
+        type: oneToOne
+      - name: organization          
+        from: partyId
+        entity: PmOrganizations
+        to: id
+        type: oneToOne
+  - name: PmIdentifications
+    extends: Basics
+    primaryKey: [id]
+    properties:
+      - name: id
+        type: integer
+        required: true
+        autoIncrement: true
+      - name: partyId
+        type: integer
+        required: true  
+      - name: type
+        enum: IdentificationType
+        length: 16
+        required: true
+      - name: value
+        length: 100
+        required: true
+      - name: source
+        length: 30
+    relations:
+      - name: party
+        from: partyId
+        entity: PmParties
+        to: id
+        target: identifications       
+  - name: PmContactMediums
+    extends: Basics
+    primaryKey: [id]
+    properties:
+      - name: id
+        type: integer
+        required: true
+        autoIncrement: true
+      - name: partyId
+        type: integer
+        required: true  
+      - name: type
+        enum: ContactMediumType
+        length: 16
+        required: true    
+      - name: value
+        length: 100
+      - name: isMain
+        type: boolean        
+      - name: isFavorite
+        type: boolean
+      - name: source
+        length: 30
+    relations:
+      - name: party
+        from: partyId
+        entity: PmParties
+        to: id
+        target: contactMediums
+  - name: PmIndividuals
+    extends: Basics
+    primaryKey: [partyId]
+    properties:
+      - name: partyId
+        type: integer
+        required: true
+      - name: gender
+        enum: Gender
+        length: 16
+      # - name: maritalStatus
+      #   enum: MaritalStatus
+      #   length: 16 
+      - name: birthDate
+        type: dateTime
+      - name: deathDate
+        type: dateTime
+      - name: nationalityCode
+        type: string
+        length: 3
+        # use ISO3
+      - name: givenNames
+        length: 200
+      - name: middleNames
+        length: 100
+      - name: familyNames
+        length: 100
+      - name: legalName
+        length: 500
+    relations:
+      - name: party
+        type: oneToOne
+        from: partyId
+        entity: PmParties
+        to: id
+        target: individual 
+      # - name: identifications
+      #   type: manyToOne
+      #   from: partyId
+      #   entity: PmIdentifications
+      #   to: partyId
+      # - name: contactMediums
+      #   type: manyToOne
+      #   from: partyId
+      #   entity: PmContactMediums
+      #   to: partyId         
+  - name: PmOrganizations
+    extends: Basics
+    primaryKey: [partyId]
+    properties:
+      - name: partyId
+        type: integer
+        required: true
+      - name: rootId
+        type: integer
+      - name: parentId
+        type: integer     
+      - name: legalPeriodFrom
+        type: dateTime
+      - name: industryTypeCode
+        length: 30
+      - name: commercialDescription
+        length: 400
+      - name: tradingName
+        length: 100  
+    relations:
+      - name: party
+        type: oneToOne
+        from: partyId
+        entity: PmParties
+        to: id
+        target: organization
+      - name: parent
+        from: parentId
+        entity: PmOrganizations
+        to: partyId        
+        target: children
+      - name: root
+        from: rootId
+        entity: PmOrganizations
+        to: partyId        
+        target: descendants  
+      - name: industryType
+        from: industryTypeCode
+        entity: PmIndustryTypes
+        to: code

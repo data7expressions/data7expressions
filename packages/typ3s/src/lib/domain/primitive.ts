@@ -1,0 +1,16 @@
+export enum Primitive
+{ any = 'any'
+, string = 'string'
+, integer = 'integer'
+, decimal = 'decimal'
+, number = 'number'
+, boolean = 'boolean'
+, date = 'date'
+, dateTime = 'dateTime'
+, time = 'time'
+, void = 'void'
+, obj = 'obj'
+, list = 'list'
+, function = 'function'
+, undefined = 'undefined'
+}
