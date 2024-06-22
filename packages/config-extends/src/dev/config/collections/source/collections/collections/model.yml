@@ -1,3 +1,0 @@
-_extends: [common.model, location.model, party.model, accounting.model, billing.model, debtor.model]
-views:
-  - name: default
