@@ -1,8 +1,20 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## Versions
+## 2.1.0 (2024-06-22)
+
+
+### Features
+
+* prepare grunt by workspace ([62b43e1](https://github.com/data7expressions/data7expressions/commit/62b43e1f2a3997af324f169b12b8616c6e10036f))
+
+
+### Bug Fixes
+
+* bugfix for mono repo ([6325be8](https://github.com/data7expressions/data7expressions/commit/6325be87c6630f247f1a2b3fd67b5698d9bbf28a))
+* bugfix for mono repor ([f324b5f](https://github.com/data7expressions/data7expressions/commit/f324b5f5dc976e6600a1f0acbeb91229279f5f02))
+* bugfix for mono repor ([dc957d0](https://github.com/data7expressions/data7expressions/commit/dc957d0f8e5062dc2950bf5191c8df34d45ff4dd))
 
 ### [1.12.1](https://github.com/data7expressions/h3lp/compare/v1.12.0...v1.12.1) (2024-06-07)
 

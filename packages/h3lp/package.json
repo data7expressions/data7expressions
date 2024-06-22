@@ -1,18 +1,18 @@
 {
 	"name": "@data7expressions/h3lp",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "Helper for nodeJs",
 	"author": "Flavio Lionel Rita <flaviolrita@hotmail.com>",
 	"license": "Apache-2.0 License",
 	"main": "src/index.js",
 	"homepage": "https://github.com/data7expressions/h3lp#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/data7expressions/data7expressions.git"
-  },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/data7expressions/data7expressions.git"
+	},
 	"publishConfig": {
-    "access": "public"
-  },
+		"access": "public"
+	},
 	"dependencies": {
 		"undici-types": "^6.19.2"
 	},
@@ -23,5 +23,5 @@
 	"tags": [
 		"helper",
 		"help"
-	]	
+	]
 }
