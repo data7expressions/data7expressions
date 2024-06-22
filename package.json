@@ -1,59 +1,45 @@
 {
-  "name": "data7expressions",
-  "version": "2.0.0",
-  "description": "Mono repo for data & expressions libs",
-  "workspaces": ["./packages/*"],
-  "keywords": [],
-	"author": "Flavio Lionel Rita <flaviolrita@hotmail.com>",
-	"license": "Apache-2.0 License",
-	"private": true,
-	"homepage": "https://github.com/data7expressions/data7expressions#readme",
-	"bugs": {
-		"url": "https://github.com/data7expressions/data7expressions/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/data7expressions/data7expressions.git"
-	},
-  "scripts": {
-		"lint": "npx eslint src",
-		"test": "npx jest --config jest-unit-config.json",
-		"build": "npx tsc",
-		"dist": "grunt dist",
-		"doc": "grunt doc",
-		"release": "grunt release"
-	},
-  "devDependencies": {
-		"@babel/eslint-parser": "^7.23.3",
-		"@types/jest": "^29.5.2",
-		"@types/js-yaml": "^4.0.5",
-		"@types/node": "^20.9.2",
-		"@typescript-eslint/eslint-plugin": "^7.0.0",
-		"@typescript-eslint/parser": "^7.3.1",
-		"config-extends": "2.0.11",
-		"eslint": "^8.56.0",
-		"eslint-config-standard": "^17.1.0",
-		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-n": "^16.0.0",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-promise": "^6.1.1",
-		"grunt": "^1.5.3",
-		"grunt-contrib-clean": "^2.0.1",
-		"grunt-contrib-concat": "^2.1.0",
-		"grunt-contrib-copy": "^1.0.0",
-		"grunt-contrib-uglify": "^5.0.1",
-		"grunt-exec": "^3.0.0",
-		"jest": "^29.5.0",
-		"js-yaml": "^4.1.0",
-		"load-grunt-tasks": "^5.1.0",
-		"ts-jest": "^29.1.0",
-		"ts-node": "^10.9.1",
-		"typedoc": "^0.25.3",
-		"typedoc-plugin-markdown": "4.0.3",
-		"typescript": "5.4.5"
-	},
-  "standard-version": {
-		"header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n## Versions\n"
-	}
-
+		"name": "data7expressions",
+		"version": "2.0.1",
+		"description": "Mono repo for data & expressions libs",
+		"keywords": [],
+		"author": "Flavio Lionel Rita <flaviolrita@hotmail.com>",
+		"license": "Apache-2.0 License",
+		"private": true,
+		"homepage": "https://github.com/data7expressions/data7expressions#readme",
+		"bugs": {
+				"url": "https://github.com/data7expressions/data7expressions/issues"
+		},
+		"repository": {
+				"type": "git",
+				"url": "https://github.com/data7expressions/data7expressions.git"
+		},
+		"workspaces": [
+				"./packages/*"
+		],
+		"scripts": {
+				"build": "npm run build --workspaces",
+				"test": "npm run test --workspaces",
+				"version": "fab version",
+				"release": "fab release"
+		},
+		"devDependencies": {
+				"@babel/eslint-parser": "^7.23.3",
+				"@types/jest": "^29.5.2",
+				"@types/js-yaml": "^4.0.5",
+				"@types/node": "^20.9.2",
+				"eslint": "^9.5.0",
+				"eslint-plugin-n": "^16.0.0",
+				"eslint-plugin-node": "^11.1.0",
+				"eslint-plugin-promise": "^6.1.1",
+				"jest": "^29.5.0",
+				"ts-jest": "^29.1.0",
+				"ts-node": "^10.9.1",
+				"typedoc": "^0.25.3",
+				"typedoc-plugin-markdown": "4.0.3",
+				"typescript": "5.4.5"
+		},
+		"standard-version": {
+				"header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n## Versions\n"
+		}
 }
