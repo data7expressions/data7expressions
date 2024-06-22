@@ -1,6 +1,5 @@
 {
 	"name": "@data7expressions/h3lp",
-	"version": "2.1.5",
 	"description": "Helper for nodeJs",
 	"author": "Flavio Lionel Rita <flaviolrita@hotmail.com>",
 	"license": "Apache-2.0 License",
@@ -15,6 +14,12 @@
 	},
 	"dependencies": {
 		"undici-types": "^6.19.2"
+	},
+	"scripts": {
+		"build": "fab build",
+		"test": "fab test",
+		"doc": "fab doc",
+		"dist": "fab dist"
 	},
 	"keywords": [
 		"helper",
