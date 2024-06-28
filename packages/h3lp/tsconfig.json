@@ -1,13 +1,34 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "build"
-  },
-  "include": [
-    "src/**/*",
-  ],	
-  "exclude": [
-    "node_modules"
-  ]  
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"strict": true,
+		"declaration": true,
+		"noImplicitAny": false,
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"target": "ES6",
+		"module": "commonjs",
+		"outDir": "./build",
+		"baseUrl": "./src",
+		"typeRoots": [
+			"node_modules/@types"
+		]
+	},
+	"include": [
+		"src/**/*.ts"
+   	],
+	"exclude": [
+		"node_modules",
+		"**/__jest__/*"
+	],
+	"ignoreRules": {
+		"TS2307": true,
+		"TS2339": true,
+		"TS2551": true,
+		"TS2554": true,
+		"TS7006": true
+	}
 }

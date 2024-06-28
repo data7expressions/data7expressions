@@ -90,7 +90,7 @@ def dist(ctx):
         {'src': 'build/lib', 'dest': 'dist', 'is_dir': True},
         {'src': './README.md', 'dest': 'dist/README.md', 'is_dir': False},
         {'src': './LICENSE', 'dest': 'dist/LICENSE', 'is_dir': False},
-        {'src': './jest-config.json', 'dest': 'dist/jest-config.json', 'is_dir': False},        
+        {'src': './jest-config.json', 'dest': 'dist/jest-config.json', 'is_dir': False}
     ]
     copy(copy_operations)
     create_package()
